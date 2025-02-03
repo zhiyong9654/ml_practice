@@ -25,6 +25,7 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to
 5. How can task decomposition be used to enhance the flexibility and adaptability of LLM agents in various domains?
 
 These alternative questions cover different aspects of the original question, such as explaining the concept, understanding its applications, and exploring its benefits and limitations. By asking these questions, you can retrieve a broader range of relevant documents from the vector database."""
+```
 
 # 03
 ## Link
