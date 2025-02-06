@@ -32,3 +32,11 @@ These alternative questions cover different aspects of the original question, su
 https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to_9.ipynb
 ## quick notes 
 1. RAG fusion depends on the rank ordering of the documents. But the retriever doesn't have clear documentation to explain whether is it ranked most relevant to least. I would assume so, and through testing, I can see this is the case, but remember to check this.
+
+
+# 04
+## Link
+https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to_9.ipynb
+## quick notes 
+1. Decomposition makes sense to me, to decompose the question into subquestions, then iterative answer each subquestion to build context. But in the example in the video, they answer each subquestion, but don't do a final loop to answer the original question. Quite strange to me to not answer the original question, so i implemented that instead.
+1. Used a more modern approach of structured outputs to guarantee the output questions.
