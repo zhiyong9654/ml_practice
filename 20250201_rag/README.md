@@ -50,3 +50,9 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to
     1. from_template is just basically f-string replacement
     1. from_messages is a more configurable version, where we can dictate 'system', 'user', 'ai'
 1. When using LLM models and all these different prompt abstractions, remember to use the specific models role and proper prompt templates. Don't just copy the prompt_template script blindly. E.g. llama3.2 uses system/user/assistant, not system/user/ai.
+
+# 06
+## Link
+https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to_9.ipynb
+## quick notes 
+1. HyDE as a concept seems really interesting to me. I think in real world applications, I would like to benchmark the similarity scores of the documents retrieved by HyDE vs retrieved by non-hyde. Can probably do an average of similarity scores as a metric in real world.
