@@ -62,3 +62,14 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to
 https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_and_11.ipynb
 ## quick notes 
 1. Idea is quite simple, use an LLM to decide what DB to use for retrieval. Use an LLM to decide what prompts to use. No issues.
+
+# 08
+## Link
+https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_and_11.ipynb
+## quick notes 
+1. [Remember to pass pydantic definition into the prompt!] I was wondering, when we use pydantic models to constrain the LLM output. I know that we constrain the probabilities for LLM output to be bias to follow our schema, but I wasn't sure if our pydantic model definition is given to the LLM in the prompt. Looking through the debug for langchain, it doesn't seem like the pydantic model definition is passed into the prompt, hence I observed better performance if i specified in the prompt, what's the expected pydantic output model that i wanted.
+
+# 09
+## Link
+https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_and_11.ipynb
+## quick notes 
