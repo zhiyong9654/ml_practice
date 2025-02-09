@@ -56,3 +56,9 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to
 https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_5_to_9.ipynb
 ## quick notes 
 1. HyDE as a concept seems really interesting to me. I think in real world applications, I would like to benchmark the similarity scores of the documents retrieved by HyDE vs retrieved by non-hyde. Can probably do an average of similarity scores as a metric in real world.
+
+# 07
+## Link
+https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_and_11.ipynb
+## quick notes 
+1. Idea is quite simple, use an LLM to decide what DB to use for retrieval. Use an LLM to decide what prompts to use. No issues.
