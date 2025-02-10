@@ -73,3 +73,5 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_a
 ## Link
 https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_and_11.ipynb
 ## quick notes 
+1. I think this method addresses one of the issues i had with vanilla rag and the chunking of docs, in that the retrieved documents are disjointed and don't follow a coherent flow, which may be confusing to the LLM. This method, which has an LLM summarize the doc, and stores the summarized embeddings, but retrieves the full doc, helps with this perfectly, in making sure we retrieve the full docs, without worrying about chunking making the docs unreliable/disjointed. But this methods relies on your LLM having a long context length.
+1. This notebook also shows that we are able to use MultiVectorRetriever, to retrieve paired items (in this case vector, document, id)
