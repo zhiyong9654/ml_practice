@@ -75,3 +75,12 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_a
 ## quick notes 
 1. I think this method addresses one of the issues i had with vanilla rag and the chunking of docs, in that the retrieved documents are disjointed and don't follow a coherent flow, which may be confusing to the LLM. This method, which has an LLM summarize the doc, and stores the summarized embeddings, but retrieves the full doc, helps with this perfectly, in making sure we retrieve the full docs, without worrying about chunking making the docs unreliable/disjointed. But this methods relies on your LLM having a long context length.
 1. This notebook also shows that we are able to use MultiVectorRetriever, to retrieve paired items (in this case vector, document, id)
+
+# 10
+## Link
+## quick notes 
+1. RAPTOR simply asks an LLM to summarize clusters of documents repeatedly, building higher level abstractions. This allows abstract questions to retrieve abstract documents, instead of multiple detailed documents.
+1. RAPTOR method employs dimensionality reduction, global clustering, then local clustering.
+    1. I didn't understand why dimensionality reduction -> Performance reasons as clustering is slow with high embedding dims.
+    1. I didn't understand why 2x clustering -> Performance reasons again, to avoid O(n2) scaling, and logically, it's like clustering docs into Topic, then subtopic.
+    1. These points aren't as applicable if the number of docs are small.
