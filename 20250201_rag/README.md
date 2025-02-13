@@ -84,3 +84,4 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_a
     1. I didn't understand why dimensionality reduction -> Performance reasons as clustering is slow with high embedding dims.
     1. I didn't understand why 2x clustering -> Performance reasons again, to avoid O(n2) scaling, and logically, it's like clustering docs into Topic, then subtopic.
     1. These points aren't as applicable if the number of docs are small.
+1. For dimensionality reduction, personally I thought it better to use an embedding model with a smaller dimension, rather than applying dimensionality reduction, since the PCA/UMAP aren't optimized to keep language context, but an embedding model obviously is. Or alternatively use Matryoshka based embedding models, then we can size down accordingly.
