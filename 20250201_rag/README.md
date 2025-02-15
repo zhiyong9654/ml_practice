@@ -85,3 +85,6 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_a
     1. I didn't understand why 2x clustering -> Performance reasons again, to avoid O(n2) scaling, and logically, it's like clustering docs into Topic, then subtopic.
     1. These points aren't as applicable if the number of docs are small.
 1. For dimensionality reduction, personally I thought it better to use an embedding model with a smaller dimension, rather than applying dimensionality reduction, since the PCA/UMAP aren't optimized to keep language context, but an embedding model obviously is. Or alternatively use Matryoshka based embedding models, then we can size down accordingly.
+1. RAPTOR is super dependent on clustering, which is obvious, but some issues that weren't apparent till I tried it was:
+    1. Need to select cluster size carefully. Not just by BIC or silhouette score, but you also need to make sure that the docs in each local cluster is not too many, otherwise you will run out of context size. This gives a weird issue where you are trying to balance cluster size by clustering metrics, but you have an external constraint of context size. An idea might be to set the scoring metric for cluster to consider context length as well.
+    1. Might be a good idea to visualize TSNE/UMAP results, or get actual feedback on what's the optimum global cluster size
