@@ -78,6 +78,7 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_a
 
 # 10
 ## Link
+https://github.com/langchain-ai/langchain/blob/master/cookbook/RAPTOR.ipynb
 ## quick notes 
 1. RAPTOR simply asks an LLM to summarize clusters of documents repeatedly, building higher level abstractions. This allows abstract questions to retrieve abstract documents, instead of multiple detailed documents.
 1. RAPTOR method employs dimensionality reduction, global clustering, then local clustering.
@@ -88,3 +89,18 @@ https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_10_a
 1. RAPTOR is super dependent on clustering, which is obvious, but some issues that weren't apparent till I tried it was:
     1. Need to select cluster size carefully. Not just by BIC or silhouette score, but you also need to make sure that the docs in each local cluster is not too many, otherwise you will run out of context size. This gives a weird issue where you are trying to balance cluster size by clustering metrics, but you have an external constraint of context size. An idea might be to set the scoring metric for cluster to consider context length as well.
     1. Might be a good idea to visualize TSNE/UMAP results, or get actual feedback on what's the optimum global cluster size
+
+# 11
+## Link
+https://github.com/langchain-ai/rag-from-scratch/blob/main/rag_from_scratch_12_to_14.ipynb
+## quick notes 
+1. Colbert is pretty uninteresting to me, because the pairwise similarity calc for each token (not document) embedding kills any sort of real time performance. There's a pretty nice library called RAGatouille that's introduced though. 
+
+# 12
+## Link
+https://github.com/langchain-ai/langgraph/blob/main/examples/rag/langgraph_crag.ipynb
+## quick notes 
+1. CRAG itself sounds pretty logical, grade the retrieved docs, and try to correct it somehow if it isn't
+1. This notebook also teaches quite a bit about langgraph.
+1. Might also consider grading multiple documents at once to save time.
+1. Langgraph is basically a bunch of functions, manipulating a single `state`. state is just a dic containing all the data needed for your particular flow.
