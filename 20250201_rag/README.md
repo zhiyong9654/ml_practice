@@ -105,3 +105,11 @@ https://github.com/langchain-ai/langgraph/blob/main/examples/rag/langgraph_crag.
 1. Might also consider grading multiple documents at once to save time.
 1. Langgraph is basically a bunch of functions, manipulating a single `state`. state is just a dic containing all the data needed for your particular flow.
 1. One issue thats confusing to me for CRAG, is that they use the rewritten question as the user question. I thought they should have used the original user query in the prompt, and only use the rewritten question for websearch. But minor difference i guess.
+
+# 13
+## Link
+## quick notes 
+1. Adaptive RAG seems like an expansion of CRAG. We add in an additional LLM grading for hallucinations.
+1. I was confused between structured output and tool calling. I've been using structured output as a replacement for tool calling for the longest time, but the main use case is:
+    1. Tool calling is best when you want the model to call any number of functions/apis etc with a defined set of params.
+    1. Structured output, like it's name, simply forces the model to conform to your output. You can make it conform to a pydantic model, then parse the output and use a function, but tool calling does this more elegantly.
