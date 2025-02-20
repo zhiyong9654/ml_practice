@@ -104,3 +104,4 @@ https://github.com/langchain-ai/langgraph/blob/main/examples/rag/langgraph_crag.
 1. This notebook also teaches quite a bit about langgraph.
 1. Might also consider grading multiple documents at once to save time.
 1. Langgraph is basically a bunch of functions, manipulating a single `state`. state is just a dic containing all the data needed for your particular flow.
+1. One issue thats confusing to me for CRAG, is that they use the rewritten question as the user question. I thought they should have used the original user query in the prompt, and only use the rewritten question for websearch. But minor difference i guess.
