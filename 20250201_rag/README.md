@@ -108,8 +108,10 @@ https://github.com/langchain-ai/langgraph/blob/main/examples/rag/langgraph_crag.
 
 # 13
 ## Link
+https://github.com/langchain-ai/langgraph/blob/main/examples/rag/langgraph_adaptive_rag_cohere.ipynb
 ## quick notes 
 1. Adaptive RAG seems like an expansion of CRAG. We add in an additional LLM grading for hallucinations.
 1. I was confused between structured output and tool calling. I've been using structured output as a replacement for tool calling for the longest time, but the main use case is:
     1. Tool calling is best when you want the model to call any number of functions/apis etc with a defined set of params.
     1. Structured output, like it's name, simply forces the model to conform to your output. You can make it conform to a pydantic model, then parse the output and use a function, but tool calling does this more elegantly.
+1. Caveats of tool calling. Even though tool calling reduces quite a bit of boilerplate, i ran into an issue where commandr should support tool calling, but in my debugging, i could see that command r didn't, while llama3.1 did. So make sure to test properly. See the debug section of notebook for more info.
